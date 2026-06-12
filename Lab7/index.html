@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 7 - Obiekty i JSON</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        pre { background-color: #f4f4f4; padding: 10px; border-radius: 5px; }
+        button { padding: 5px 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Laboratorium 7 - Obiekty i JSON</h1>
+    <p>Otwórz konsolę (F12), aby zobaczyć wyniki zadań 1-5.</p>
+    <hr>
+
+    <h3>Zadania 6, 7, 8, 9 - Generowanie i filtrowanie danych JSON</h3>
+    <label for="iloscRekordow">Ile rekordów wygenerować (max 20)? </label>
+    <input type="number" id="iloscRekordow" min="1" max="20" value="5">
+    <button id="btn-generuj">Generuj Dane</button>
+    
+    <h4>Wynik Zadania 7 (Wszyscy wygenerowani):</h4>
+    <pre id="wynik-wszyscy">Oczekuję na wygenerowanie...</pre>
+
+    <h4>Wynik Zadania 8 (Tylko pełnoletni):</h4>
+    <pre id="wynik-pelnoletni">Oczekuję na wygenerowanie...</pre>
+
+    <h4>Wynik Zadania 9 (Same imiona):</h4>
+    <pre id="wynik-imiona">Oczekuję na wygenerowanie...</pre>
+
+    <script src="script.js"></script>
+</body>
+</html>
