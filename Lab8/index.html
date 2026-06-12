@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 8 - Formularze</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background: #f0f0f0; }
+        .kontener { background: white; max-width: 500px; padding: 20px; margin: auto; border-radius: 8px; }
+        .pole { margin-bottom: 15px; display: flex; flex-direction: column; }
+        .pole label { font-weight: bold; margin-bottom: 5px; }
+        .pole input, .pole select { padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+        /* Zadanie 3*/     
+          .error { color: red; font-size: 12px; height: 14px; margin-top: 3px; }
+        .ukryte { display: none !important; }
+        button { background: #007BFF; color: white; border: none; padding: 10px; border-radius: 4px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="kontener">
+        <form id="formularz" novalidate>
+            
+            <div class="pole">
+                <label>Imię</label>
+                <input type="text" id="imie" required>
+                <span class="error"></span>
+            </div>
+
+            <div class="pole">
+                <label>Nazwisko</label>
+                <input type="text" id="nazwisko" required>
+                <span class="error"></span>
+            </div>
+
+            <div class="pole">
+                <label>Płeć</label>
+                <select id="plec" required>
+                    <option value="">Wybierz...</option>
+                    <option value="K">Kobieta</option>
+                    <option value="M">Mężczyzna</option>
+                </select>
+                <span class="error"></span>
+            </div>
+
+            <div class="pole">
+                <label>Data Urodzenia</label>
+                <input type="date" id="dataUrodzenia" required>
+                <span class="error"></span>
+            </div>
+
+            <div class="pole">
+                <label>Email</label>
+                <input type="email" id="email" required>
+                <span class="error"></span>
+            </div>
+
+            <div class="pole">
+                <label>Hasło</label>
+                <input type="password" id="haslo" required>
+                <span class="error"></span>
+            </div>
+
+            <div class="pole">
+                <label>Powtórz hasło</label>
+                <input type="password" id="powtorzHaslo" required>
+                <span class="error"></span>
+            </div>
+
+            <div class="pole">
+                <label>Telefon</label>
+                <input type="text" id="telefon" required>
+                <span class="error"></span>
+            </div>
+
+            <div class="pole">
+                <label>Kraj</label>
+                <select id="kraj" required>
+                    <option value="">Wybierz...</option>
+                    <option value="Polska">Polska</option>
+                    <option value="Inny">Inny</option>
+                </select>
+                <span class="error"></span>
+            </div>
+
+            <div class="pole ukryte" id="blokWojewodztwo">
+                <label>Województwo</label>
+                <div id="miejsceNaWojewodztwo"></div>
+                <span class="error"></span>
+            </div>
+
+            <div class="pole">
+                <label>Adres zamieszkania</label>
+                <input type="text" id="adresZam" disabled required>
+                <span class="error"></span>
+            </div>
+
+            <div class="pole" style="flex-direction: row; align-items: center;">
+                <input type="checkbox" id="takiSamAdres" checked style="width: auto; margin-right: 10px;">
+                <label style="margin: 0; font-weight: normal;">Adres korespondencyjny jest taki sam jak adres zamieszkania</label>
+            </div>
+
+            <div class="pole ukryte" id="blokAdresKor">
+                <label>Adres korespondencyjny</label>
+                <input type="text" id="adresKor" disabled required>
+                <span class="error"></span>
+            </div>
+
+            <button type="submit">Zapisz</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
