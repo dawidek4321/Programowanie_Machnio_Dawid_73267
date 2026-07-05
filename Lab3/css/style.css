@@ -1,11 +1,13 @@
-* {
+/* Zadanie 1 */
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
     padding: 0;
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
+    color: #333333;
 }
 
 h1 {
@@ -14,71 +16,81 @@ h1 {
 
 h4 {
     font-size: 30px;
+    margin: 0;
 }
 
+/* Zadanie 2 */
 header {
     position: sticky;
-    width: 100%;
-    background-color: lightgray;
     top: 0;
     left: 0;
+    width: 100%;
+    background-color: #d3d3d3;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     box-shadow: 0 0 10px 2px #aaa;
     padding: 20px 120px;
     z-index: 100;
 }
 
 header .logo {
-    margin-right: auto;
-    font-weight: bold;
-    font-size: 20px;
+    font-weight: 700;
+    font-size: 24px;
 }
 
-header ul {
+/* Zadanie 3 */
+ul.nav-links {
     list-style: none;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 30px;
     margin: 0;
     padding: 0;
 }
 
-header a {
+ul.nav-links li a {
     text-decoration: none;
-    color: #333;
+    color: #333333;
+    font-weight: 600;
 }
 
-header a.active {
-    color: #ff0000;
-    font-weight: bold;
+ul.nav-links li a.active {
+    color: #D94B18;
 }
 
-article, section {
+/* Zadanie 4: przeniesienie stylów do tego pliku */
+
+/* Zadanie 5 */
+section, article {
     display: block;
-    margin: 0 120px;
+}
+
+section {
+    padding: 0 120px;
     font-size: 20px;
 }
 
+/* Zadanie 6 i 7 */
 article {
     position: relative;
-    display: flex; 
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 150px 120px;
 }
 
+/* Zadanie 8 */
 .article-element {
     width: 50%;
 }
 
+/* Zadanie 9 */
 footer {
     text-align: center;
-    padding: 30px;
-    background-color: #333;
-    color: white;
-    margin-top: 50px;
+    padding: 20px;
 }
+
+/* Zadanie 10: style gotowe do podpięcia pod inne podstrony */
